@@ -10,6 +10,15 @@ const HelloWorldApp = () => {
         alignItems: 'center',
       }}>
       <Text>Hello, world!</Text>
+      <TextInput>
+        id={
+            'input1'
+        }
+        style={{
+            width: '80px',
+            height: '20px',
+        }}
+      </TextInput>
     </View>
   );
 };
