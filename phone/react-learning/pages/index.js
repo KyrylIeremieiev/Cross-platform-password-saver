@@ -1,18 +1,26 @@
 import React, {useEffect} from "react";
 import { useState } from "react";
 import { createRoot } from 'react-dom/client';
-function setHTML(){
-    useEffect(() => {
-        var roller = document.getElementById("hi");
-        roller.innerHTML = "red";
-      }, [])
-    console.log("works")
-}
+
 export default function Home(){
-    const [title, setTitle] = useState('');
+    const [user, setUser] = useState('');
+    const [pass, setPass] = useState('');
     return(
         <section>
-            
+            <input
+                type="text"
+                required
+                value={user}
+                onChange={(e)=>setUser(e.target.value)}
+            />
+            <input
+                type="text"
+                required
+                value={pass}
+                onChange={(e)=>setPass(e.target.value)}
+            />
+            <h2>{ user }</h2>
+            <h2>{ pass }</h2>
         </section>
         );
 }
